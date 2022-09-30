@@ -1,0 +1,24 @@
+/*
+ The MIT License (MIT)
+ Copyright (c) 2020 Amir Adhamian (github.com/c-dyane)
+ https://github.com/c-dyane/buzzer/blob/main/LICENSE
+ https://github.com/c-dyane/archive/blob/main/LICENSE
+*/
+
+/* mobile */
+@media only screen and (max-width: 400px) {
+ #footer {
+  position: fixed;
+  bottom: 16;
+  width: 95%;
+ }
+}
+
+textarea {
+ resize: none;
+ width: 100%;
+}
+
+table tr:nth-child(even) {background-color: #eee;}
+table tr:nth-child(odd) {background-color: #fff;}
+table tr:hover {background-color: #ddd;}

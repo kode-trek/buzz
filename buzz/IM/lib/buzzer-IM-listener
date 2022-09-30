@@ -1,0 +1,9 @@
+#! /bin/bash
+
+while [ 1 ]
+do
+	notify-send "`cat /var/www/html/buzzer-IM/incoming.txt 2>/dev/null`" \
+	2>/dev/null
+	sudo rm "/var/www/html/buzzer-IM/incoming.txt" 2>/dev/null
+	sleep 4
+done

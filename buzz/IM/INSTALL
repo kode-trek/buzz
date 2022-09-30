@@ -1,0 +1,17 @@
+#! /bin/bash
+
+# The MIT License (MIT)
+# Copyright (c) 2020 Amir Adhamian (github.com/c-dyane)
+# https://github.com/c-dyane/buzzer/blob/main/LICENSE
+# https://github.com/c-dyane/archive/blob/main/LICENSE
+
+sudo apt-get update
+sudo apt-get install -y php
+sudo apt-get install -y apache2
+sudo apt-get install -y libapache2-mod-php
+#sudo apt-get install mysql-server
+
+sudo chown -R www-data:www-data /var/www/html
+sudo gzip /var/www/html/index.html 2>/dev/null
+
+./START

@@ -1,0 +1,37 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="src.css">
+
+<title>buzzer-IM</title>
+
+<div id="footer" align="center">
+<form action="src.php" method="post" enctype="multipart/form-data">
+<table>
+<tr><td>
+	<p style="background-color: lightblue">
+	Data is sending over HTTP that could be considered as an
+	<b>in-secure</b> activity.
+	</p>
+</td></tr>
+<tr><td><hr></td></tr>
+<tr><td>
+	<b>Email</b> (looking for a reply?)<br>
+	<input style="width:100%" type="email" name="email" />
+</td></tr>
+<tr><td>
+	Leave me a <b>Message</b> (MAX 420 characters)
+	<textarea name="msg" rows="4" maxlength="420"></textarea>
+</td></tr>
+<tr><td>
+	Attach <b>File</b> (MAX 4MB)<br>
+	<input type="file" name="fileToUpload" />
+</td></tr>
+<tr><td><hr></td></tr>
+<tr><td align="center">
+	<input type="submit" class="button" value="Send" />
+	<input type="reset" class="button" value="Clear" />
+</td></tr>
+</table></form></div>
+
+<script src="src.js"></script>
+

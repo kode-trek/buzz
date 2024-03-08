@@ -1,0 +1,19 @@
+#! /bin/bash
+
+path="/var/www/html/buzzer-chat/"
+if [[ -e $path ]]
+then
+ echo "[WARNING] an application with similar name found: $path"
+ read -p "Continue? (Y/N): " confirm && [[ $confirm == [yY] ]] || exit 1
+fi
+
+sudo rm -r $path 2>/dev/null
+sudo mkdir $path
+sudo cp -r "lib/"* $path
+sudo chown -R www-data:www-data $path
+
+sudo rm "/etc/php/7.4/apache2/php.ini" 2>/dev/null
+sudo cp "lib/conf/php-ORIGINAL.ini" "/etc/php/7.4/apache2/php.ini"
+sudo /etc/init.d/apache2 restart
+
+read -n1 -r -p "press any key to EXIT..." key
